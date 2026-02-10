@@ -1,0 +1,7 @@
+@layer base{ 
+    h1{ 
+        font-size: 64px; 
+        line-height: 1.2; 
+        margin-bottom: 1rem; 
+    }
+}
