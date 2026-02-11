@@ -1,11 +1,16 @@
 import Image from "next/image";
+import Button from "./components/Button";
+import Button_danger from "./components/Button_danger";
+import Project_card from "./components/Project_card";
+import person from "../public/globe.svg";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <div>
 
 
-
+<Navbar me = {"J.V"} cut1 = {"About Me"} cut2 = {"Skills"} cut3 = {"Projects"} src = {person} alt = {"Profile Picture"}/> 
       <div className = "flex items-center justify-between px-2 py-5"> 
         <h1> J.V </h1>
         <ul className = "flex gap-6"> 
@@ -28,6 +33,10 @@ export default function Home() {
              I love Pokemon, music, 
              spicy snacks and a good show. </h3>
 
+             <Button text = {"click me"}/> 
+             <Button_danger text = {"delete me"}/> 
+
+
 
 
 <div> 
@@ -41,6 +50,7 @@ export default function Home() {
 
 </div>
 
+    <Project_card title = {"Movie Theater Site"} date = {"10/7/25"} info = {"A team project"} src = {person} alt ={"Project image"} /> 
 
     </div>
   );

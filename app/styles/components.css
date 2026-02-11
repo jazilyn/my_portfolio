@@ -20,4 +20,13 @@
         font-size:1rem; 
         font-family:'Jacques Francois', serif;
     }
+    .myButton{ 
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+    }
 }
