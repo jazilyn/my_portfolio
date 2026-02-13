@@ -4,22 +4,15 @@ import Button_danger from "./components/Button_danger";
 import Project_card from "./components/Project_card";
 import person from "../public/globe.svg";
 import Navbar from "./components/Navbar";
+import logo from "../public/logo.png"; 
 
 export default function Home() {
   return (
     <div>
 
 
-<Navbar me = {"J.V"} cut1 = {"About Me"} cut2 = {"Skills"} cut3 = {"Projects"} src = {person} alt = {"Profile Picture"}/> 
-      <div className = "flex items-center justify-between px-2 py-5"> 
-        <h1> J.V </h1>
-        <ul className = "flex gap-6"> 
-          <li> About Me </li>
-          <li> Skills </li>
-          <li> Projects </li>  
-        </ul>
-      </div>
-
+<Navbar me = {"J.V"} cut1 = {"About Me"} cut2 = {"Skills"} cut3 = {"Projects"} src = {"logo"} alt = {"Profile Picture"}/> 
+        
 
 
         <h2 className = "heading1"> hey there! </h2>
@@ -33,9 +26,7 @@ export default function Home() {
              I love Pokemon, music, 
              spicy snacks and a good show. </h3>
 
-             <Button text = {"click me"}/> 
-             <Button_danger text = {"delete me"}/> 
-
+            
 
 
 

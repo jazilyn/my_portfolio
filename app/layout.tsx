@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Jacques_Francois_Shadow, Jacques_Francois } from "next/font/google";
+import { Inter, Roboto, Jacques_Francois_Shadow, Jacques_Francois } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import logo from "../public/logo.png";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const geistSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistMono = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
+  weight: "400",
 });
-
 const jacquesFrancoisShadow = Jacques_Francois_Shadow({
   variable: "--font-jacques-francois-shadow",
   subsets: ["latin"],
@@ -40,6 +42,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${jacquesFrancoisShadow.variable} ${jacquesFrancois.variable} antialiased`}
       >
         {children}
+        
       </body>
     </html>
   );
