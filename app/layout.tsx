@@ -6,6 +6,7 @@ import {
   Jacques_Francois,
 } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 // Inter → variable font (supports variable)
 const inter = Inter({
@@ -54,9 +55,11 @@ export default function RootLayout({
           ${jacquesFrancois.variable}
           antialiased
         `}
-      >
+      > <Navbar/>
         {children}
+       
       </body>
+     
     </html>
   );
 }

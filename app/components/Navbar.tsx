@@ -3,13 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
+import Image from "next/image";
+import logo from "../../public/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full flex justify-between items-center py-6 px-6 md:px-12 lg:px-24">
-      <Link href="/" className="text-xl font-semibold">
+    <nav className="bg-amber-700 w-full flex justify-between items-center py-6 px-6 md:px-12 lg:px-24">
+      <Image src={logo} alt="Logo" width={40} height={40} className="rounded-full " /> 
+      <Link href="/" className="text-xl font-semibold ">
         JV
       </Link>
 

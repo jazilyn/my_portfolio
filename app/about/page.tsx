@@ -1,11 +1,13 @@
 import SectionTitle from "../components/SectionTitle";
 import ImagePlaceholder from "../components/ImagePlaceholder";
+import Navbar from "../components/Navbar";
 
 export default function About() {
   return (
     <section className="py-20">
+      <Navbar />
       <SectionTitle text="About Me" />
-
+   
       <div className="flex flex-col md:flex-row gap-12">
         <ImagePlaceholder width="w-full md:w-1/3" />
 
