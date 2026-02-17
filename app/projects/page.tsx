@@ -9,7 +9,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <ProjectCard
           title="Project Title"
-          description="Short description of the project. Clean, simple, and easy to read."
+          description="Project."
         />
       </div>
     </section>
