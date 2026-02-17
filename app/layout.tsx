@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Jacques_Francois_Shadow, Jacques_Francois } from "next/font/google";
+import {
+  Inter,
+  Roboto,
+  Jacques_Francois_Shadow,
+  Jacques_Francois,
+} from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import logo from "../public/logo.png";
 
-const geistSans = Inter({
+// Inter → variable font (supports variable)
+const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Roboto({
+// Roboto → supports weights
+const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: "400",
 });
+
+// Jacques Francois Shadow → NO weight option
 const jacquesFrancoisShadow = Jacques_Francois_Shadow({
   variable: "--font-jacques-francois-shadow",
   subsets: ["latin"],
   weight: "400",
 });
 
+// Jacques Francois → supports weight 400
 const jacquesFrancois = Jacques_Francois({
   variable: "--font-jacques-francois",
   subsets: ["latin"],
@@ -33,16 +41,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${jacquesFrancoisShadow.variable} ${jacquesFrancois.variable} antialiased`}
+        className={`
+          ${inter.variable}
+          ${roboto.variable}
+          ${jacquesFrancoisShadow.variable}
+          ${jacquesFrancois.variable}
+          antialiased
+        `}
       >
         {children}
-        
       </body>
     </html>
   );

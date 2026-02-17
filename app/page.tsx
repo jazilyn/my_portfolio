@@ -1,48 +1,26 @@
-import Image from "next/image";
-import Button from "./components/Button";
-import Button_danger from "./components/Button_danger";
-import Project_card from "./components/Project_card";
-import person from "../public/globe.svg";
-import Navbar from "./components/Navbar";
-import logo from "../public/logo.png"; 
+type HeroProps = {
+  title: string;
+  highlight: string;
+  description: string;
+};
 
-export default function Home() {
+export default function Hero({ title, highlight, description }: HeroProps) {
   return (
-    <div>
+    <section className="flex flex-col md:flex-row items-center justify-between py-20 gap-12">
+      <div className="flex-1">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          {title} <span className="text-[#b8a9c9]">{highlight}</span>
+        </h1>
+        <p className="text-lg md:text-xl leading-relaxed max-w-md">
+          {description}
+        </p>
+      </div>
 
-
-<Navbar me = {"J.V"} cut1 = {"About Me"} cut2 = {"Skills"} cut3 = {"Projects"} src = {"logo"} alt = {"Profile Picture"}/> 
-        
-
-
-        <h2 className = "heading1"> hey there! </h2>
-        <h3> I’m Jazilyn Velasco, a web designer and 
-        coder located in beautiful Newark, NJ. </h3>
-
-
-        <h3> I use programs like Figma and
-             VSCode to create accessible 
-             and aesthetic pleasing sites.
-             I love Pokemon, music, 
-             spicy snacks and a good show. </h3>
-
-            
-
-
-
-<div> 
-<hr/>
-  <p> This is my style sheet </p> 
-  <h1 className = "heading1"> Heading 1 </h1>
-  <h2 className="heading2"> Heading 2 </h2>
-  <h3 className = "heading3"> Heading 3 </h3>
-  <h4 className = "heading4"> Heading 4 </h4>
-  <p className = "paragraph"> Paragraph </p> 
-
-</div>
-
-    <Project_card title = {"Movie Theater Site"} date = {"10/7/25"} info = {"A team project"} src = {person} alt ={"Project image"} /> 
-
-    </div>
+      <div className="flex-1 flex justify-center">
+        <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-xl flex items-center justify-center">
+          IMAGE
+        </div>
+      </div>
+    </section>
   );
 }
