@@ -1,3 +1,6 @@
+import star1 from '../public/Star 1.png';
+import Image from 'next/image';
+
 
 export default function Home() {
   return (
@@ -16,8 +19,8 @@ export default function Home() {
 
       
       <div className="flex-1 flex justify-center">
-        <div className="w-64 h-64 md:w-80 md:h-80 bg-gray-300 rounded-xl flex items-center justify-center">
-          IMAGE
+        <div className="flex items-center justify-center">
+          <Image src={star1} alt="Star 1" width={300} height={300} className="w-full h-full object-cover rounded-xl" />
         </div>
       </div>
     </section>
