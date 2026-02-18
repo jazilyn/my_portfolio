@@ -4,15 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
 import Image from "next/image";
-import logo from "../../public/logo.png";
+
+const logo = "/logo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="bg-amber-700 w-full flex justify-between items-center py-6 px-6 md:px-12 lg:px-24">
-      <Image src={logo} alt="Logo" width={40} height={40} className="rounded-full " /> 
-      <Link href="/" className="text-xl font-semibold ">
+    <nav className="bg-amber-700 w-full flex justify-between items-center py-6 px-6 md:px-12">
+      <Image src={logo} alt="Logo" width={77} height={77}/> 
+      <Link href="/" className="heading1 text-xl font-semibold  ">
         JV
       </Link>
 
@@ -21,6 +22,7 @@ export default function Navbar() {
         <Link href="/about">About</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/skills">Skills</Link>
+        <Link href="/contact_me">Contact Me</Link>
       </div>
 
       
