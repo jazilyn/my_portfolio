@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 
 
-export default function ProjectCard({ title, description, source }: {title:string, description:string, source:string}) {
+export default function ProjectCard({ title, description, source }: {title:string, description:string, source:string | StaticImageData}) {
   return (
     <div className="bg-white shadow-md rounded-xl p-6">
       <div className="w-full h-40 bg-gray-300 rounded-lg mb-4 flex items-center justify-center">
