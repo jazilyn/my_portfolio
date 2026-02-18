@@ -9,8 +9,7 @@ export default function ContactPage() {
     e.preventDefault();
     setSubmitted(true);
 
-    // This is where an actual email service would go.
-    // For now, it just shows a confirmation message.
+   
   };
 
   return (
@@ -22,7 +21,7 @@ export default function ContactPage() {
         onSubmit={handleSubmit}
         className="w-full max-w-xl bg-white p-8 rounded-xl shadow-md border border-[#e5dfd3]"
       >
-        {/* Name */}
+       
         <label className="block mb-4">
           <span className="text-lg font-medium">Your Name</span>
           <input
@@ -32,7 +31,6 @@ export default function ContactPage() {
           />
         </label>
 
-        {/* Email */}
         <label className="block mb-4">
           <span className="text-lg font-medium">Your Email</span>
           <input
@@ -42,7 +40,7 @@ export default function ContactPage() {
           />
         </label>
 
-        {/* Subject */}
+     
         <label className="block mb-4">
           <span className="text-lg font-medium">Subject</span>
           <input
@@ -52,7 +50,6 @@ export default function ContactPage() {
           />
         </label>
 
-        {/* Message */}
         <label className="block mb-6">
           <span className="text-lg font-medium">Message</span>
           <textarea
@@ -62,7 +59,6 @@ export default function ContactPage() {
           ></textarea>
         </label>
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="w-full py-3 bg-[#b7e4c7] border-2 border-white rounded-xl text-lg font-semibold hover:opacity-90"
@@ -70,7 +66,7 @@ export default function ContactPage() {
           Send Message
         </button>
 
-        {/* Confirmation */}
+  
         {submitted && (
           <p className="mt-4 text-green-700 font-medium">
             Your message has been sent (not really, but the button works)!
